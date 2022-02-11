@@ -36,7 +36,7 @@ Future<Response> sendRequest(
     }
   }
 
-  if (!path.contains('https://') || !path.contains('http://')) {
+  if (!path.contains('https://') && !path.contains('http://')) {
     dio.options.baseUrl         = dotenv.env['BASE_URL']!;
   }
   
